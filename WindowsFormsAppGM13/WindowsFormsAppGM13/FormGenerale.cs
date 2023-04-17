@@ -35,6 +35,7 @@ namespace WindowsFormsAppGM13
         private void FormGenerale_Load(object sender, EventArgs e)
         {
             comboBoxMatos.Items.Clear();
+            LoadInterventions();
 
             SqlConnection cn = null;
             SqlCommand com = null;
@@ -110,7 +111,7 @@ namespace WindowsFormsAppGM13
 
             SqlConnection cn = null;
             SqlCommand com = null;
-           
+
             cn = new SqlConnection(this.connstring);
             cn.Open();
 
@@ -129,6 +130,10 @@ namespace WindowsFormsAppGM13
 
             MessageBox.Show("Intervention ajoutée, merci", "Succès",
                 MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            MessageBox.Show("Intervention ajoutée, merci", "Succès",
+                MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            LoadInterventions();
 
             if (cn != null)
             {
@@ -139,7 +144,56 @@ namespace WindowsFormsAppGM13
                     com.Dispose();
                 }
             }
-            
+
+        }
+        private void LoadInterventions()
+        {
+            using (SqlConnection cn = new SqlConnection(this.connstring))
+            {
+                cn.Open();
+
+                using (SqlCommand com = new SqlCommand("SELECT * FROM INTERVENTION", cn))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(com);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    dataGridViewInterventions.DataSource = dt;
+                }
+            }
+
+
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewInterventions.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Voulez-vous vraiment supprimer l'intervention sélectionnée ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    int selectedId = Convert.ToInt32(dataGridViewInterventions.SelectedRows[0].Cells["ID_INTER"].Value);
+
+                    using (SqlConnection cn = new SqlConnection(this.connstring))
+                    {
+                        cn.Open();
+
+                        using (SqlCommand com = new SqlCommand("DELETE FROM INTERVENTION WHERE ID_INTER = @idinter", cn))
+                        {
+                            com.Parameters.Add("@idinter", SqlDbType.Int).Value = selectedId;
+
+                            com.ExecuteNonQuery();
+                        }
+                    }
+
+                    LoadInterventions();
+                    MessageBox.Show("Intervention supprimée avec succès.", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez sélectionner une intervention à supprimer.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -24,3 +24,17 @@ C:\Users\alexi\source\repos\AppGM13 last version\WindowsFormsAppGM13\WindowsForm
 C:\Users\alexi\source\repos\AppGM13 last version\WindowsFormsAppGM13\WindowsFormsAppGM13\obj\Debug\WindowsFormsAppGM13.csproj.CoreCompileInputs.cache
 C:\Users\alexi\source\repos\AppGM13 last version\WindowsFormsAppGM13\WindowsFormsAppGM13\obj\Debug\WindowsFormsAppGM13.exe
 C:\Users\alexi\source\repos\AppGM13 last version\WindowsFormsAppGM13\WindowsFormsAppGM13\obj\Debug\WindowsFormsAppGM13.pdb
+C:\Users\alexi\source\repos\Application gestion matos\WindowsFormsAppGM13\WindowsFormsAppGM13\bin\Debug\WindowsFormsAppGM13.exe.config
+C:\Users\alexi\source\repos\Application gestion matos\WindowsFormsAppGM13\WindowsFormsAppGM13\bin\Debug\WindowsFormsAppGM13.exe
+C:\Users\alexi\source\repos\Application gestion matos\WindowsFormsAppGM13\WindowsFormsAppGM13\bin\Debug\WindowsFormsAppGM13.pdb
+C:\Users\alexi\source\repos\Application gestion matos\WindowsFormsAppGM13\WindowsFormsAppGM13\obj\Debug\WindowsFormsAppGM13.csproj.AssemblyReference.cache
+C:\Users\alexi\source\repos\Application gestion matos\WindowsFormsAppGM13\WindowsFormsAppGM13\obj\Debug\WindowsFormsAppGM13.csproj.SuggestedBindingRedirects.cache
+C:\Users\alexi\source\repos\Application gestion matos\WindowsFormsAppGM13\WindowsFormsAppGM13\obj\Debug\WindowsFormsAppGM13.FormGenerale.resources
+C:\Users\alexi\source\repos\Application gestion matos\WindowsFormsAppGM13\WindowsFormsAppGM13\obj\Debug\WindowsFormsAppGM13.FormClient.resources
+C:\Users\alexi\source\repos\Application gestion matos\WindowsFormsAppGM13\WindowsFormsAppGM13\obj\Debug\WindowsFormsAppGM13.FormMatos.resources
+C:\Users\alexi\source\repos\Application gestion matos\WindowsFormsAppGM13\WindowsFormsAppGM13\obj\Debug\WindowsFormsAppGM13.Properties.Resources.resources
+C:\Users\alexi\source\repos\Application gestion matos\WindowsFormsAppGM13\WindowsFormsAppGM13\obj\Debug\WindowsFormsAppGM13.csproj.GenerateResource.cache
+C:\Users\alexi\source\repos\Application gestion matos\WindowsFormsAppGM13\WindowsFormsAppGM13\obj\Debug\WindowsFormsAppGM13.csproj.CoreCompileInputs.cache
+C:\Users\alexi\source\repos\Application gestion matos\WindowsFormsAppGM13\WindowsFormsAppGM13\obj\Debug\WindowsFormsAppGM13.exe
+C:\Users\alexi\source\repos\Application gestion matos\WindowsFormsAppGM13\WindowsFormsAppGM13\obj\Debug\WindowsFormsAppGM13.pdb
+C:\Users\alexi\source\repos\Application gestion matos\WindowsFormsAppGM13\WindowsFormsAppGM13\obj\Debug\WindowsFormsAppGM13.LoginForm.resources

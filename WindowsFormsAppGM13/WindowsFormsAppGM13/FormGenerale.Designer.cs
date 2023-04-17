@@ -40,16 +40,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePickerAddInter = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewInterventions = new System.Windows.Forms.DataGridView();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInterventions)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonClient
             // 
             this.buttonClient.Font = new System.Drawing.Font("Viner Hand ITC", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClient.Location = new System.Drawing.Point(13, 365);
-            this.buttonClient.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonClient.Location = new System.Drawing.Point(15, 456);
+            this.buttonClient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonClient.Name = "buttonClient";
-            this.buttonClient.Size = new System.Drawing.Size(499, 176);
+            this.buttonClient.Size = new System.Drawing.Size(561, 220);
             this.buttonClient.TabIndex = 0;
             this.buttonClient.Text = "Clients";
             this.buttonClient.UseVisualStyleBackColor = true;
@@ -58,10 +61,10 @@
             // buttonMatos
             // 
             this.buttonMatos.Font = new System.Drawing.Font("Viner Hand ITC", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMatos.Location = new System.Drawing.Point(539, 365);
-            this.buttonMatos.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonMatos.Location = new System.Drawing.Point(606, 456);
+            this.buttonMatos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonMatos.Name = "buttonMatos";
-            this.buttonMatos.Size = new System.Drawing.Size(495, 176);
+            this.buttonMatos.Size = new System.Drawing.Size(557, 220);
             this.buttonMatos.TabIndex = 1;
             this.buttonMatos.Text = "Matériel";
             this.buttonMatos.UseVisualStyleBackColor = true;
@@ -69,6 +72,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonDelete);
             this.groupBox1.Controls.Add(this.buttonAdd);
             this.groupBox1.Controls.Add(this.comboBoxMatos);
             this.groupBox1.Controls.Add(this.textBoxTech);
@@ -78,21 +82,24 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dateTimePickerAddInter);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(23, 13);
+            this.groupBox1.Location = new System.Drawing.Point(26, 16);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(489, 317);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(550, 396);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ajouter une intervention";
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(19, 254);
+            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdd.Location = new System.Drawing.Point(21, 318);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(447, 44);
+            this.buttonAdd.Size = new System.Drawing.Size(231, 55);
             this.buttonAdd.TabIndex = 8;
-            this.buttonAdd.Text = "Ajouter une intervention";
+            this.buttonAdd.Text = "Ajouter intervention";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
@@ -100,85 +107,113 @@
             // 
             this.comboBoxMatos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMatos.FormattingEnabled = true;
-            this.comboBoxMatos.Location = new System.Drawing.Point(110, 204);
+            this.comboBoxMatos.Location = new System.Drawing.Point(124, 255);
+            this.comboBoxMatos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxMatos.Name = "comboBoxMatos";
-            this.comboBoxMatos.Size = new System.Drawing.Size(200, 24);
+            this.comboBoxMatos.Size = new System.Drawing.Size(224, 28);
             this.comboBoxMatos.TabIndex = 7;
             // 
             // textBoxTech
             // 
-            this.textBoxTech.Location = new System.Drawing.Point(110, 162);
+            this.textBoxTech.Location = new System.Drawing.Point(124, 202);
+            this.textBoxTech.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxTech.Name = "textBoxTech";
-            this.textBoxTech.Size = new System.Drawing.Size(200, 22);
+            this.textBoxTech.Size = new System.Drawing.Size(224, 26);
             this.textBoxTech.TabIndex = 6;
             // 
             // textBoxComment
             // 
-            this.textBoxComment.Location = new System.Drawing.Point(110, 77);
+            this.textBoxComment.Location = new System.Drawing.Point(124, 96);
+            this.textBoxComment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxComment.Multiline = true;
             this.textBoxComment.Name = "textBoxComment";
-            this.textBoxComment.Size = new System.Drawing.Size(344, 72);
+            this.textBoxComment.Size = new System.Drawing.Size(386, 89);
             this.textBoxComment.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 207);
+            this.label4.Location = new System.Drawing.Point(18, 259);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 16);
+            this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Materiel";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 162);
+            this.label3.Location = new System.Drawing.Point(18, 202);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 16);
+            this.label3.Size = new System.Drawing.Size(85, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Technicien";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 84);
+            this.label2.Location = new System.Drawing.Point(18, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 16);
+            this.label2.Size = new System.Drawing.Size(104, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Commentaire";
             // 
             // dateTimePickerAddInter
             // 
             this.dateTimePickerAddInter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerAddInter.Location = new System.Drawing.Point(110, 31);
+            this.dateTimePickerAddInter.Location = new System.Drawing.Point(124, 39);
+            this.dateTimePickerAddInter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePickerAddInter.Name = "dateTimePickerAddInter";
-            this.dateTimePickerAddInter.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePickerAddInter.Size = new System.Drawing.Size(224, 26);
             this.dateTimePickerAddInter.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 37);
+            this.label1.Location = new System.Drawing.Point(18, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 16);
+            this.label1.Size = new System.Drawing.Size(44, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Date";
             // 
+            // dataGridViewInterventions
+            // 
+            this.dataGridViewInterventions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInterventions.Location = new System.Drawing.Point(606, 30);
+            this.dataGridViewInterventions.Name = "dataGridViewInterventions";
+            this.dataGridViewInterventions.RowHeadersWidth = 62;
+            this.dataGridViewInterventions.RowTemplate.Height = 28;
+            this.dataGridViewInterventions.Size = new System.Drawing.Size(546, 382);
+            this.dataGridViewInterventions.TabIndex = 3;
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.Location = new System.Drawing.Point(258, 318);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(286, 55);
+            this.buttonDelete.TabIndex = 9;
+            this.buttonDelete.Text = "Supprimer intervention";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
             // FormGenerale
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.dataGridViewInterventions);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonMatos);
             this.Controls.Add(this.buttonClient);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormGenerale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion Matos 13";
             this.Load += new System.EventHandler(this.FormGenerale_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInterventions)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,6 +232,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerAddInter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.DataGridView dataGridViewInterventions;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }
 

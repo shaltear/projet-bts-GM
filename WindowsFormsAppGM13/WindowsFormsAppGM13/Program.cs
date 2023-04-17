@@ -16,7 +16,18 @@ namespace WindowsFormsAppGM13
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormGenerale());
+
+            using (LoginForm loginForm = new LoginForm())
+            {
+                if (loginForm.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Run(new FormGenerale());
+                }
+                else
+                {
+                    MessageBox.Show("Connexion annulée.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
